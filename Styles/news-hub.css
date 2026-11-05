@@ -1,0 +1,50 @@
+/* PAGE HEADER */
+.page-hero{position:relative;padding:170px 32px 40px;overflow:hidden;
+background:radial-gradient(55% 60% at 80% 30%,rgba(255,130,175,.13),transparent 70%)}
+.page-hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,180,207,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,180,207,.05) 1px,transparent 1px);
+background-size:64px 64px;mask-image:radial-gradient(70% 90% at 50% 20%,#000,transparent);-webkit-mask-image:radial-gradient(70% 90% at 50% 20%,#000,transparent)}
+.page-glow{position:absolute;width:480px;height:480px;border-radius:50%;background:#8b5cf6;filter:blur(120px);opacity:.3;top:-160px;right:-60px;animation:drift 14s ease-in-out infinite alternate}
+.page-word{position:absolute;right:2vw;top:70px;font:900 clamp(140px,24vw,340px)/.85 "Nunito",sans-serif;letter-spacing:-.06em;color:transparent;
+-webkit-text-stroke:1.5px rgba(255,180,207,.12);user-select:none;pointer-events:none}
+.page-hero-inner{position:relative;z-index:2;max-width:var(--max-width);margin:0 auto}
+.crumbs{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--text-muted);margin-bottom:24px}
+.crumbs a{transition:color .2s}.crumbs a:hover{color:var(--pink-light)}.crumbs i{font-size:9px}.crumbs span{color:var(--pink-light)}
+.page-hero h1{font-size:clamp(48px,8vw,108px);font-weight:900;margin-bottom:22px}
+.lede{color:var(--text-soft);font-size:19px;max-width:500px}
+.filters{display:flex;flex-wrap:wrap;gap:10px;margin-top:36px}
+.chip{padding:10px 20px;border-radius:99px;border:1px solid var(--border);background:rgba(255,255,255,.04);font-size:12px;font-weight:700;letter-spacing:.14em;transition:.3s}
+.chip b{margin-left:8px;opacity:.55;font-weight:700}
+.chip:hover{border-color:var(--pink);transform:translateY(-2px)}
+.chip.active{background:var(--grad);color:#2a0d1b;border-color:transparent;box-shadow:0 0 28px rgba(255,157,188,.3)}
+
+/* FEED */
+.hub{padding-top:36px;padding-bottom:120px}
+.hub-featured{position:relative;display:grid;grid-template-columns:1.2fr 1fr;min-height:420px;margin-bottom:24px;border-radius:var(--radius);overflow:hidden;
+border:1px solid var(--border);background:var(--bg-card);box-shadow:0 30px 90px rgba(0,0,0,.45)}
+.hub-featured:hover,.news-card:hover{transform:translateY(-6px);border-color:rgba(255,157,188,.45);box-shadow:0 26px 70px rgba(0,0,0,.5)}
+.hub-featured.reveal.visible,.news-card.reveal.visible{transition:transform .4s cubic-bezier(.22,1,.36,1),border-color .4s,box-shadow .4s}
+.hub-featured .news-image,.news-card .news-image{position:relative;overflow:hidden}
+.hub-featured .news-image img,.news-card .news-image img{position:absolute;inset:0;height:100%;object-fit:cover;transition:transform 1.2s}
+.hub-featured:hover .news-image img,.news-card:hover .news-image img{transform:scale(1.06)}
+.hub-featured .news-content{padding:48px}
+.hub-featured h2{font-size:clamp(30px,3.6vw,50px)}
+
+.news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.news-card{display:flex;flex-direction:column;border-radius:var(--radius);overflow:hidden;border:1px solid var(--border);background:var(--bg-card)}
+.news-card .news-image{aspect-ratio:16/10}
+.news-card-body{display:flex;flex-direction:column;gap:12px;flex:1;padding:24px}
+.news-card h3{font-size:25px}.news-card p{color:var(--text-soft);font-size:15px}
+.read-more{margin-top:auto;padding-top:6px;color:var(--pink-light);font-weight:600;display:inline-flex;align-items:center;gap:8px}
+.read-more i{transition:transform .3s}.news-card:hover .read-more i{transform:translateX(5px)}
+.hub-featured .button span{transition:transform .3s}.hub-featured:hover .button span{transform:translateX(4px)}
+
+.hub-empty{grid-column:1/-1;display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center;padding:64px 20px;border:1px dashed rgba(255,180,207,.25);border-radius:var(--radius);color:var(--text-muted)}
+.hub-empty i{font-size:26px;color:var(--pink);margin-bottom:6px;animation:pulse 2.4s infinite;border-radius:50%}
+.hub-empty strong{color:var(--text);font:800 22px "Nunito",sans-serif}
+
+@media(max-width:900px){
+.page-hero{padding-top:130px}.page-word{top:90px;opacity:.7}
+.hub-featured{grid-template-columns:1fr}.hub-featured .news-image{height:250px}.hub-featured .image-overlay{background:linear-gradient(transparent 55%,var(--bg-card))}
+.hub-featured .news-content{padding:30px 26px}.news-grid{grid-template-columns:1fr}
+}
+@media(min-width:901px) and (max-width:1100px){.news-grid{grid-template-columns:repeat(2,1fr)}}
