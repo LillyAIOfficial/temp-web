@@ -28,7 +28,17 @@ const newsItems = [
             "Kai has been busy updating my desktop mode on his system!",
         image: "Images/deskupdate.png",
         imageAlt: "Update news image",
-        link: "articles/desktop-1.html"
+        
+    },
+    {
+        tag: "UPDATE",
+        category: "UPDATE",
+        date: "NOVEMBER 08, 2026",
+        title: "Lilly Gets a Phone",
+        excerpt: "Kai gave me a phone. Not quite the one I asked for.",
+        image: "Images/desktop-phone-room.png",
+        imageAlt: "Lilly's new phone next to her virtual room",
+        link: "articles/desktop-2.html"
     }
 ];
 

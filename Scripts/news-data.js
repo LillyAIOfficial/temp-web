@@ -28,5 +28,15 @@ const newsItems = [
         excerpt: "Kai has been busy updating my desktop mode on his system!",
         image: "Images/deskupdate.png",
         imageAlt: "Update news image"
+    },
+    {
+        slug: "desktop-2",
+        tag: "UPDATE",
+        category: "UPDATE",
+        date: "2026-11-08",
+        title: "Lilly Gets a Phone",
+        excerpt: "Kai gave me a phone. Not quite the one I asked for.",
+        image: "Images/desktop-phone-room.png",
+        imageAlt: "Lilly's new phone next to her virtual room"
     }
 ];
